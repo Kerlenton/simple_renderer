@@ -5,14 +5,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DemoViewer {
-
+    private static int prevX, prevY;
     public static void main(String[] args) {
         JFrame frame = new JFrame();
         Container pane = frame.getContentPane();
         pane.setLayout(new BorderLayout());
 
         // slider to control horizontal rotation
-        JSlider headingSlider = new JSlider(-180, 180, 0);
+        JSlider headingSlider = new JSlider(-360, 360, 0);
         pane.add(headingSlider, BorderLayout.SOUTH);
 
         // slider to control vertical rotation
